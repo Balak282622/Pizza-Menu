@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen 1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            background-color: rgb(240, 240, 193);
+            height: 1080px;
+            width: 1920px;
+            padding: 15px;
+        }
+
+        .left {
+            display: flex;
+            height: 100%;
+            width: 48%;
+            float: left;
+            flex-wrap: wrap;
+        }
+
+        .right {
+            display: flex;
+            height: 97.8%;
+            width: 48%;
+            float: right;
+            border: 1px solid;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .p-text {
+            color: white;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            /* border: 1px solid; */
+            padding: 10px;
+            height: 76%;
+        }
+
+        .grid-container>div {
+
+            /* border: 1px solid; */
+            padding: 2px 0;
+        }
+
+        .grid-container>div>h2 {
+            color: rgb(56, 55, 55);
+        }
+
+        .aside-bottom {
+            float: right;
+            margin-right: 96px;
+        }
+        .aside-top {
+            float: right;
+            margin-right: 48px;
+        }
+
+        .column {
+            float: left;
+            border: 1px solid;
+            width: 33.33%;
+            padding: 10px;
+            height: 80px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .column h1 {
+            text-align: center;
+        }
+
+        /* Clear floats after the columns */
+        .row {
+            content: "";
+            width: 66%;
+            display: table;
+            clear: both;
+        }
+
+        .ws-left {
+            border: 1px solid;
+            width: 50%;
+        }
+
+        .ws-right {
+            border: 1px solid;
+            width: 50%;
+        }
+
+        .ws-left-top {
+            border: 1px solid;
+            height: 50%;
+        }
+
+        .ws-left-bottom {
+            border: 1px solid;
+            height: 50%;
+        }
+
+
+        #wing-sauce-option {
+            display: flex;
+            width: 66%;
+            height: 77%;
+            border: 2px solid;
+            flex: 1;
+        }
+
+        #border {
+            border: 1px solid;
+            height: 100%;
+            width: 100%;
+        }
+
+        #left-top {
+            margin: 10px;
+            width: 100%;
+            height: 68%;
+            float: left;
+            border: 1px solid;
+        }
+
+        #left-bottom {
+            margin: 10px;
+            width: 100%;
+            height: 27.5%;
+            float: left;
+            border: 1px solid;
+        }
+
+        #s-top {
+            display: flex;
+            height: 70.200px;
+            width: 100%;
+            /* background-color: red; */
+            background-image: linear-gradient(to right, red, red, white, white, white);
+            opacity: 0.7;
+        }
+
+        #wings {
+            text-align: center;
+            color: red;
+        }
+
+        #h2-red {
+            color: red;
+        }
+
+        #ws-top-l-detail{
+            text-align: center;
+        }
+
+        #ws-top-l-detail h1{
+            margin: 15px;
+            padding-top: 5px;
+        }
+
+        #ws-top-r-detail{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="border">
+            <div class="left">
+                <div id="left-top">
+                    <div id="s-top">
+                        <h1 class="p-text">WINGS</h1>
+                    </div>
+                    <div>
+                        <p id="t-paragraph">Get mosty with dollclously spicy and crispy chicken wings.</p>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <h3 id="wings">8 Wings</h3>
+                            <h1>$9.99</h1>
+                        </div>
+                        <div class="column">
+                            <h3 id="wings">14 Wings</h3>
+                            <h1>$15.99</h1>
+                        </div>
+                        <div class="column">
+                            <h3 id="wings">22 Wings</h3>
+                            <h1>$21.99</h1>
+                        </div>
+                    </div>
+                    <div id="wing-sauce-option">
+                        <div class="ws-left">
+                            <div class="ws-left-top">
+                                <h2 id="h2-red">Choose your wings</h2>
+                                <div id="ws-top-l-detail">
+                                    <h1>Traditional Wings</h1>
+                                    <h3>40 Cals / Wings</h3>
+                                    <h1>Boneless Wings</h1>
+                                    <h3>60 Cals / Wings</h3>
+                                </div>
+                            </div>
+                            <div class="ws-left-bottom">
+                            </div>
+                        </div>
+                        <div class="ws-right">
+                            <h2 id="h2-red">Choose your sauce</h2>
+                            <div id="ws-top-r-detail">
+                                <h3>GARLIC PARMESAN <span class="aside-top">5</span></h3>
+                                <h3>HONEY GARLIC <span class="aside-top">20</span></h3>
+                                <h3>HONEY BBQ <span class="aside-top">35</span></h3>
+                            </div>
+                            <div id="ws-top-r-detail">
+                                <h3>INDIAN BUTTER <span class="aside-top">5</span></h3>
+                                <h3>SALT & PEPPER  <span class="aside-top">15</span></h3>
+                                <h3>MILO BUFFALO  <span class="aside-top">20</span></h3>
+                            </div>
+                            <div id="ws-top-r-detail">
+                                <h3>GARLIC PARMESAN <span class="aside-top">5</span></h3>
+                                <h3>HONEY GARLIC <span class="aside-top">20</span></h3>
+                                <h3>HONEY BBQ <span class="aside-top">35</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="left-bottom">
+                    <div id="s-top">
+                        <h1 class="p-text">DIPS</h1>
+                    </div>
+                    <div class="grid-container">
+                        <div>
+                            <h2>MARINARA <span class="aside-bottom">85*</span></h2>
+                            <p>30 &nbsp;Cals</p>
+                        </div>
+                        <div>
+                            <h2>CHEDDAR &nbsp;JALAPENO <span class="aside-bottom">85*</span></h2>
+                            <p>390 &nbsp;Cals</p>
+                        </div>
+                        <div>
+                            <h2>PEPPER &nbsp;CORN <span class="aside-bottom">85*</span></h2>
+                            <p>190 &nbsp;Cals</p>
+                        </div>
+                        <div>
+                            <h2>CREAMY &nbsp;GARLIC <span class="aside-bottom">85*</span></h2>
+                            <p>210 &nbsp;Cals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="s-top">
+                    <h1 class="p-text">RECIPE PIZZA</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
